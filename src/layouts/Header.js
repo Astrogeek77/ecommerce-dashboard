@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 function Header() {
   let history = useHistory();
   let user = JSON.parse(localStorage.getItem("user-info"));
-  console.warn("user", user);
+  // console.warn("user", user);
   function logout() {
     localStorage.clear();
     history.push("/login");
@@ -22,7 +22,7 @@ function Header() {
                       <>
                       <Link to="/">Product List</Link>
                       <Link to="/add">Add Product</Link>
-                      <Link to="/update">Update Product</Link>
+                      {/* <Link to="/update">Update Product</Link> */}
                       </>
                   ) : (
                       <>

@@ -26,7 +26,7 @@ function ProductList() {
     <div>
       <Header />
       <h1>Product List</h1>
-      <div className="col-sm-8 offset-sm-2">
+      <div className="col-sm-10 offset-sm-1">
         <Table>
           <tbody>
             <tr>

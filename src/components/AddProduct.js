@@ -11,8 +11,9 @@ export default function AddProduct() {
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
 
-  async function addProduct() {
+  async function addProduct(event) {
     // console.warn(name, file, price, description)
+    event.preventDefault();
     const formData = new FormData();
     formData.append('file_path', file);
     formData.append('price', price);
@@ -22,7 +23,8 @@ export default function AddProduct() {
       method: 'POST',
       body: formData
     });
-    result = result.json();
+    // alert(result)
+    result = await result.json();
     alert("Data has been saved")
     history.push('/')
     }
