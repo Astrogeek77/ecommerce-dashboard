@@ -6,6 +6,8 @@ import AddProduct from "./components/AddProduct";
 import UpdateProduct from "./components/UpdateProduct";
 import ProductList from "./components/ProductList";
 
+import SearchProduct from "./components/SearchProduct";
+
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 
@@ -30,6 +32,9 @@ function App() {
           </Route>
           <Route path="/add">
             <Protected Cmp={AddProduct} />
+          </Route>
+          <Route path="/search">
+            <Protected Cmp={SearchProduct} />
           </Route>
           
         </Switch>
