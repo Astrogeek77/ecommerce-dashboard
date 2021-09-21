@@ -38,11 +38,11 @@ export default function Register(){
         <Header />
         <div className="col-sm-6 offset-sm-3">
             <h1>Register Page</h1>
-            <input type="text" value={name} onChange={(e)=>setName(e.target.value)} className="form-control" placeholder="name" />
+            <input required type="text" value={name} onChange={(e)=>setName(e.target.value)} className="form-control" placeholder="name" />
             <br />
-            <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} className="form-control" placeholder="email" />
+            <input required type="text" value={email} onChange={(e)=>setEmail(e.target.value)} className="form-control" placeholder="email" />
             <br />
-            <input type="password" value={password}  onChange={(e)=>setPassword(e.target.value)} className="form-control" placeholder="password" />
+            <input required type="password" value={password}  onChange={(e)=>setPassword(e.target.value)} className="form-control" placeholder="password" />
             
             <br />
             <button onClick={signUp} className="btn btn-primary">Sign Up</button>

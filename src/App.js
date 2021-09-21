@@ -1,11 +1,13 @@
 import './App.css';
 // import { Button } from 'react-bootstrap'
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import AddProduct from './components/AddProduct'
 import UpdateProduct from './components/UpdateProduct'
-import Login from './pages/Login'
-import Register from './pages/Register'
+import ProductList from './components/ProductList';
+
+import Login from './auth/Login'
+import Register from './auth/Register'
 
 import Protected from './middleware/Protected';
 
@@ -13,20 +15,23 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/add">
-            <Protected Cmp={AddProduct} />
-            {/* <AddProduct /> */}
-          </Route>
-          <Route path="/update">
-          <Protected Cmp={UpdateProduct} />
-            {/* <UpdateProduct /> */}
-          </Route>
+          <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/" exact>
+              <Protected Cmp={ProductList} />
+            </Route>
+            <Route path="/add">
+              <Protected Cmp={AddProduct} />
+            </Route>
+            <Route path="/update/{id}">
+            <Protected Cmp={UpdateProduct} />
+            </Route>
+          </Switch>
         </BrowserRouter>
       </div>
     

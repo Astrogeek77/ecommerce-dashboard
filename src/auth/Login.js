@@ -36,12 +36,12 @@ function Login() {
             <div className="col-sm-6 offset-sm-3">
                 <input type="text" placeholder="email"
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control" />
+                    className="form-control" required/>
                 <br />
                 <input type="password" placeholder="password"
                     onChange={(e) => setPassword(e.target.value)}
 
-                    className="form-control" />
+                    className="form-control" required/>
                 <br />
                 <button onClick={login} className="btn btn-primary" >Login</button>
 

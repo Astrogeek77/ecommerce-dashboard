@@ -20,7 +20,7 @@ function Header() {
               <Nav className="mr-auto nav-bar-wrapper">
                   {localStorage.getItem("user-info") ? (
                       <>
-                      <Link to="/add">Product List</Link>
+                      <Link to="/">Product List</Link>
                       <Link to="/add">Add Product</Link>
                       <Link to="/update">Update Product</Link>
                       </>
