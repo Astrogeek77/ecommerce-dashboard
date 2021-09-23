@@ -14,7 +14,7 @@ function Header() {
     <div>
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">E-Commerce</Navbar.Brand>
+          <Navbar.Brand>E-Commerce</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className={"justify-content-between"} id="responsive-navbar-nav">
               <Nav className="mr-auto nav-bar-wrapper">

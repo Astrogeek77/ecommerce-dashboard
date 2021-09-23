@@ -47,6 +47,7 @@ function SearchProduct() {
                     <td>Id</td>
                     <td>Name</td>
                     <td>Price</td>
+                    <td>Category</td>
                     <td>Description</td>
                     <td>Image</td>
                     <td>Operations</td>
@@ -56,6 +57,7 @@ function SearchProduct() {
                     <td>{item.id}</td>
                     <td>{item.name}</td>
                     <td>{item.price}</td>
+                    <td>{item.category}</td>
                     <td>{item.description}</td>
                     <td>
                         <img

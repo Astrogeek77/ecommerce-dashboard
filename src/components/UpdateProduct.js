@@ -3,11 +3,13 @@
 import { React, useState, useEffect} from 'react'
 import Header from '../layouts/Header'
 import { withRouter, useHistory } from 'react-router-dom'
+import Select from 'react-select'
 
 function UpdateProduct(props) {
     const [name, setName] = useState("");
     const [file_path, setFile_path] = useState("");
     const [price, setPrice] = useState("");
+    const [category, setCategory] = useState("");
     const [description, setDescription] = useState("");
     const [data, setData] = useState([])
     const history = useHistory()
@@ -33,6 +35,7 @@ function UpdateProduct(props) {
         const formData = new FormData();
         formData.append('file_path', file_path);
         formData.append('price', price);
+        formData.append('category', category);
         formData.append('name', name);
         formData.append('description', description);
         // console.log(formData)
@@ -44,6 +47,15 @@ function UpdateProduct(props) {
         alert("Data has been updated")
         history.push('/')
     } 
+
+    const options = [
+        { value: 'electronics', label: 'Electronics' },
+        { value: 'fashion', label: 'Fashion' },
+        { value: 'fitness', label: 'Fitness' },
+        { value: 'academics', label: 'Books and Academics' },
+        { value: 'daily_goods', label: 'Daily Goods' },
+      ]
+
     return (
         <div>
             <Header />
@@ -52,12 +64,21 @@ function UpdateProduct(props) {
                 <input className="form-control" type="text"
                 onChange={(e)=>setName(e.target.value)}
                 defaultValue={data.name} /> <br />
+                <Select
+                    // className="form-control"
+                    required
+                    label="Choose a Category For the Product"
+                    onChange={(e) => setCategory(e.label)}
+                    options={options}
+                    />
+                <br />
                 <input className="form-control" type="text"
                 onChange={(e)=>setPrice(e.target.value)}
                 defaultValue={data.price} /> <br />
-                <input className="form-control" type="text"
+                <textarea className="form-control" 
                 onChange={(e)=>setDescription(e.target.value)}
-                defaultValue={data.description} /> <br />
+                defaultValue={data.description}
+                style={{ "height": 100, "resize": "none" }} /> <br />
                 <input className="form-control" type="text" 
                 onChange={(e) => setFile_path(e.target.value)}
                 defaultValue={data.file_path} /> <br />

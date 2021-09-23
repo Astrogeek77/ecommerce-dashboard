@@ -34,15 +34,17 @@ function ProductList() {
               <td>Name</td>
               <td>Price</td>
               <td>Description</td>
+              <td>Category</td>
               <td>Image</td>
               <td>Operations</td>
             </tr>
-            {data.map((item) => (
+            {data.slice(0).reverse().map((item) => (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
                 <td>{item.description}</td>
+                <td>{item.category}</td>
                 <td>
                   <img
                     style={{ width: 100 }}
