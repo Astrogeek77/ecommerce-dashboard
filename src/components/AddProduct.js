@@ -43,7 +43,7 @@ export default function AddProduct() {
       { value: 'fitness', label: 'Fitness' },
       { value: 'academics', label: 'Books and Academics' },
       { value: 'daily_goods', label: 'Daily Goods' },
-    ]
+    ];
 
   return (
     <div>
@@ -58,7 +58,7 @@ export default function AddProduct() {
           // className="form-control"
           required
           aria-label="Choose a Category For the Product"
-          onChange={(options) => setCategory(options.label)}
+          onChange={(options) => setCategory(options.value)}
           options={options}
         />
         <br />
