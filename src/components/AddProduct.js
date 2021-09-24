@@ -57,7 +57,8 @@ export default function AddProduct() {
         <Select
           // className="form-control"
           required
-          aria-label="Choose a Category For the Product"
+          placeholder="Select a Category for the Product"
+          // aria-label="Choose a Category For the Product"
           onChange={(options) => setCategory(options.value)}
           options={options}
         />

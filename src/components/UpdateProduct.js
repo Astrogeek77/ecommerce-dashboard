@@ -67,7 +67,11 @@ function UpdateProduct(props) {
                 <Select
                     // className="form-control"
                     required
-                    label="Choose a Category For the Product"
+                    defaultValue={data.category}
+                    placeholder="Select a Category for the Product"
+                    // defaultInputValue={data.category}
+                    
+                    // label="Choose a Category For the Product"
                     onChange={(e) => setCategory(e.label)}
                     options={options}
                     />

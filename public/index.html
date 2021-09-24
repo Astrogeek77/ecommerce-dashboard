@@ -25,6 +25,39 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>E-Commerce site</title>
+    <style>
+      html,body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      #root {
+        padding-bottom: 30px;
+      }
+      footer {
+        position: fixed;
+        margin-top: 50px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(223, 230, 233, 0.6);
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-weight: 400;
+      }
+      footer p {
+        margin: 0;
+      }
+      footer a {
+        text-decoration: none;
+        color: #020303;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +72,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <footer>
+      <p>Developed with Love By <a href="https://github.com/Astrogeek77">Gautam Jain</a> &#169 2021</p>
+    </footer>
   </body>
 </html>
