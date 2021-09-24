@@ -49,11 +49,11 @@ function UpdateProduct(props) {
     } 
 
     const options = [
-        { value: 'electronics', label: 'Electronics' },
-        { value: 'fashion', label: 'Fashion' },
-        { value: 'fitness', label: 'Fitness' },
-        { value: 'academics', label: 'Books and Academics' },
-        { value: 'daily_goods', label: 'Daily Goods' },
+        { value: 'Electronics', label: 'Electronics' },
+        { value: 'Fashion', label: 'Fashion' },
+        { value: 'Fitness', label: 'Fitness' },
+        { value: 'Books and Academics', label: 'Books and Academics' },
+        { value: 'Daily Goods', label: 'Daily Goods' },
       ]
 
     return (
@@ -67,12 +67,12 @@ function UpdateProduct(props) {
                 <Select
                     // className="form-control"
                     required
-                    defaultValue={data.category}
+                    // defaultValue={data.category}
                     placeholder="Select a Category for the Product"
                     // defaultInputValue={data.category}
-                    
+                    // value={options.filter(option => option.label === category)}
                     // label="Choose a Category For the Product"
-                    onChange={(e) => setCategory(e.label)}
+                    onChange={(e) => setCategory(e.value)}
                     options={options}
                     />
                 <br />

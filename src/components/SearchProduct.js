@@ -41,7 +41,7 @@ function SearchProduct() {
           className="form-control"
           placeholder="Search Product"
         />
-        <Table>
+        <Table striped responsive bordered>
             <tbody>
                 <tr>
                     <td>Id</td>

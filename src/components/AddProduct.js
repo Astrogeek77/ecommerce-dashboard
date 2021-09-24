@@ -38,16 +38,17 @@ export default function AddProduct() {
     }
 
     const options = [
-      { value: 'electronics', label: 'Electronics' },
-      { value: 'fashion', label: 'Fashion' },
-      { value: 'fitness', label: 'Fitness' },
-      { value: 'academics', label: 'Books and Academics' },
-      { value: 'daily_goods', label: 'Daily Goods' },
+      { value: 'Electronics', label: 'Electronics' },
+      { value: 'Fashion', label: 'Fashion' },
+      { value: 'Fitness', label: 'Fitness' },
+      { value: 'Books and Academics', label: 'Books and Academics' },
+      { value: 'Daily Goods', label: 'Daily Goods' },
     ];
 
   return (
     <div>
       <Header />
+      <h1>Add New Product</h1>
       <Form className="col-sm-6 offset-sm-3">
         <br />
         <input type="text" className="form-control"

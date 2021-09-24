@@ -25,16 +25,16 @@ function ProductList() {
   return (
     <div>
       <Header />
-      <h1>Product List</h1>
+      <h1>All Products</h1>
       <div className="col-sm-10 offset-sm-1">
-        <Table>
+        <Table striped responsive bordered>
           <tbody>
             <tr>
               <td>Id</td>
               <td>Name</td>
+              <td>Category</td>
               <td>Price</td>
               <td>Description</td>
-              <td>Category</td>
               <td>Image</td>
               <td>Operations</td>
             </tr>
@@ -42,9 +42,9 @@ function ProductList() {
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
-                <td>{item.price}</td>
-                <td>{item.description}</td>
                 <td>{item.category}</td>
+                <td>{item.price}</td>
+                <td>{item.description}</td>    
                 <td>
                   <img
                     style={{ width: 100 }}

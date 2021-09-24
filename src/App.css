@@ -58,6 +58,13 @@ table > :not(caption) > * > * {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 20px;
+  color: #130f40;
+  padding: 20px;
+  font-weight: 500;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
