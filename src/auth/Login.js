@@ -15,7 +15,7 @@ function Login() {
     async function login() {
         console.warn(email, password)
         let item = { email, password };
-        let result = await fetch("http://localhost:8000/api/login", {
+        let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/login", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
