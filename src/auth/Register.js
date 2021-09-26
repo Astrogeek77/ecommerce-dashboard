@@ -20,7 +20,7 @@ export default function Register(){
         let item={name,password,email}
         // console.warn(item)
         
-       let result= await fetch("http://localhost:8000/api/register",{
+       let result= await fetch("https://laravel-react-crud-api.herokuapp.com/api/register",{
             method:'POST',
             body:JSON.stringify(item),
             headers:{

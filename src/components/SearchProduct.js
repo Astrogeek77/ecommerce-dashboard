@@ -8,14 +8,14 @@ function SearchProduct() {
   async function search(key) {
     console.warn(key);
 
-    let result = await fetch("http://localhost:8000/api/search/" + key);
+    let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/search/" + key);
     result = await result.json();
     console.warn(result);
     setData(result);
   }
 
   async function deleteOperation(id) {
-    let result = await fetch("http://localhost:8000/api/delete/" + id, {
+    let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/delete/" + id, {
       method: "DELETE",
     });
     result = await result.json();
@@ -24,7 +24,7 @@ function SearchProduct() {
   }
 
   async function getData() {
-    let result = await fetch("http://localhost:8000/api/listproducts");
+    let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/listproducts");
     result = await result.json();
     setData(result);
   }

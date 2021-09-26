@@ -20,7 +20,7 @@ function UpdateProduct(props) {
     // console.warn("id", props.match.params.id)
 
     useEffect(async () => {
-        let result = await fetch("http://localhost:8000/api/product/" + props.match.params.id);
+        let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/product/" + props.match.params.id);
         result = await result.json();
         // console.log(result)
         setData(result)
@@ -40,7 +40,7 @@ function UpdateProduct(props) {
         formData.append('description', description);
         // console.log(formData)
         // console.log(id)
-        let result = await fetch("http://localhost:8000/api/update/"+id+"?_method=PUT", {
+        let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/update/"+id+"?_method=PUT", {
             method: 'POST',
             body: formData
         });

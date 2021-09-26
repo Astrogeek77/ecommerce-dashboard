@@ -24,7 +24,7 @@ export default function AddProduct() {
     formData.append('price', price);
     formData.append('name', name);
     formData.append('description', description);
-    let result = await fetch("http://localhost:8000/api/addproduct", {
+    let result = await fetch("https://laravel-react-crud-api.herokuapp.com/api/addproduct", {
       method: 'POST',
       body: formData
     });
